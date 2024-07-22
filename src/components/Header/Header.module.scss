@@ -1,0 +1,81 @@
+@import '@styles/var.scss';
+@import '@styles/mixins.scss';
+
+.header {
+  min-height: 70px;
+  display: flex;
+  background-color: $white;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.container {
+  @include container;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.list {
+  display: flex;
+  align-items: center;
+
+  &Item {
+    margin-inline: 10px;
+    cursor: pointer;
+    transition: color 0.5s ease;
+
+    &:hover {
+      color: $blue-500;
+      text-decoration: underline;
+    }
+  }
+}
+
+.active {
+  color: $blue-500;
+}
+
+.link {
+  padding: 5px 10px;
+}
+
+.tel {
+  display: flex;
+  align-items: center;
+  color: $blue-500;
+  margin-left: 10px;
+  padding: 5px 10px;
+  font-size: 18px;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.mobileNav {
+  display: none;
+  align-items: center;
+  column-gap: 10px;
+
+  & button {
+    font-size: 1.8rem;
+    padding: 5px 10px;
+    transition: color 0.5s ease;
+
+    &:hover {
+      color: $blue-500;
+    }
+  }
+}
+
+@media (max-width: $tablet) {
+  .list {
+    display: none;
+  }
+
+  .mobileNav {
+    display: flex;
+  }
+}

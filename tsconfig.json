@@ -18,6 +18,16 @@
       }
     ],
     "paths": {
+      "@UI/*": ["./src/components/UI/*"],
+      "@components/*": ["./src/components/*"],
+      "@layouts/*": ["./src/components/Layouts/*"],
+      "@screens/*": ["./src/screens/*"],
+      "@styles/*": ["./src/styles/*"],
+      "@types/*": ["./src/types/*"],
+      "@images/*": ["./src/assets/images/*"],
+      "@fonts/*": ["./src/assets/fonts/*"],
+      "@store/*": ["./src/store/*"],
+      "@helpers/*": ["./src/helpers/*"],
       "@/*": ["./src/*"]
     }
   },

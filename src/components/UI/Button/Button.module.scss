@@ -1,0 +1,21 @@
+@import '@styles/var.scss';
+
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  height: 50px;
+  padding-inline: 16px;
+  transition: background-color 0.4s ease;
+
+  &:focus-visible {
+    border: 2px solid $black-600;
+  }
+}
+
+@media (max-width: $laptop) {
+  .button {
+    height: 40px;
+  }
+}

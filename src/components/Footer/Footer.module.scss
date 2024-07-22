@@ -1,0 +1,50 @@
+@import '@styles/var.scss';
+
+.footer {
+  display: flex;
+  padding: 40px 12px;
+  background-color: $gray-200;
+}
+
+.container {
+  width: 470px;
+  margin-inline: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.nav {
+  margin-block: 2.4rem 3.8rem;
+}
+
+.list {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 5px;
+
+  &Item {
+    margin-inline: 15px;
+    cursor: pointer;
+    transition: 0.5s ease;
+
+    &:hover {
+      color: $blue-500;
+      text-decoration: underline;
+    }
+  }
+}
+
+.link {
+  padding: 5px 10px;
+}
+
+.active {
+  color: $blue-500;
+}
+
+.copyright {
+  text-align: center;
+  font-size: 0.8rem;
+}

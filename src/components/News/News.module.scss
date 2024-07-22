@@ -1,0 +1,49 @@
+@import '@styles/var.scss';
+
+.news {
+  height: 100%;
+  padding-block: 10px;
+  border-bottom: 1px solid $blue-300;
+}
+
+.borderNone {
+  border: none;
+}
+
+.text {
+  margin-bottom: 10px;
+  -webkit-line-clamp: 3;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  transition: 0.3s ease;
+}
+
+.date {
+  color: $gray-700;
+  font-size: 16px;
+}
+
+.news:hover .text {
+  color: $blue-500;
+}
+
+@media (max-width: $laptop) {
+  .news {
+    border: none;
+  }
+
+  .text {
+    -webkit-line-clamp: 2;
+  }
+}
+
+@media (max-width: $mobileL) {
+  .news {
+    border-bottom: 1px solid $blue-300;
+  }
+
+  .borderNone {
+    border: none;
+  }
+}

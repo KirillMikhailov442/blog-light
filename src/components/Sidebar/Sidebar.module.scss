@@ -1,0 +1,44 @@
+@import '@styles/var.scss';
+@import '@styles/mixins.scss';
+
+.sidebar {
+  flex-basis: 320px;
+  flex-shrink: 0;
+  position: relative;
+}
+
+.content {
+  position: sticky;
+  top: 70px;
+}
+
+.title {
+  @include title;
+  margin-bottom: 20px;
+}
+
+@media (max-width: $laptop) {
+  .sidebar {
+    flex-basis: 100%;
+    margin-top: 100px;
+  }
+
+  .listNews {
+    display: flex;
+    gap: 20px;
+
+    & > * {
+      flex-basis: 33.33%;
+    }
+  }
+}
+
+@media (max-width: $mobileL) {
+  .title {
+    text-align: center;
+  }
+
+  .listNews {
+    flex-direction: column;
+  }
+}

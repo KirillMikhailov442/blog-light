@@ -1,0 +1,23 @@
+@import '@styles/var.scss';
+@import '@styles/mixins.scss';
+
+.container {
+  @include container;
+  width: 1040px;
+  margin-block: 20px 100px;
+}
+
+.header {
+  margin-block: 80px 60px;
+  text-align: center;
+}
+
+.title {
+  font-weight: 500;
+  font-size: 30px;
+}
+
+.notFound {
+  color: $gray-700;
+  margin-top: 20px;
+}

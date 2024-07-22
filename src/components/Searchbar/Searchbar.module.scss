@@ -1,0 +1,80 @@
+@import '@styles/var.scss';
+@import '@styles/mixins.scss';
+
+.wrapper {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  position: fixed;
+  z-index: 200;
+  top: 0;
+  background-color: rgba(0 0 0 / 0.5);
+  backdrop-filter: blur(1px);
+}
+
+.searchbar {
+  width: 1040px;
+  padding-inline: 10px;
+  margin-top: 80px;
+}
+
+.form {
+  padding: 25px 40px;
+  display: flex;
+  gap: 20px;
+  background-color: $white;
+  border-radius: 20px;
+  @include shadow;
+}
+
+.input {
+  flex-grow: 1;
+}
+
+.button {
+  flex-basis: 200px;
+  height: 50px !important;
+}
+
+.result {
+  padding: 20px 40px;
+  border-radius: $br;
+  background-color: $white;
+  margin-top: 10px;
+  @include shadow;
+
+  &Content {
+    overflow-y: scroll;
+    scrollbar-width: none;
+    max-height: 290px;
+  }
+
+  &Item {
+    & p {
+      margin-bottom: 0px;
+    }
+  }
+}
+
+@media (max-width: $tablet) {
+  .searchbar {
+    margin-top: 0px;
+    padding-inline: 0px;
+  }
+
+  .form {
+    border-radius: 0px;
+    padding: 20px 10px;
+  }
+
+  .button {
+    flex-basis: 120px;
+  }
+
+  .result {
+    &Content {
+      max-height: 40vh;
+    }
+  }
+}

@@ -1,0 +1,28 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import './var.scss';
+
+body {
+  display: flex;
+  flex-direction: column;
+  color: $black-600;
+  background-color: $gray-100;
+  min-height: 100vh;
+}
+
+.no-scroll {
+  overflow: hidden;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.show {
+  filter: blur(10px);
+  pointer-events: none;
+}

@@ -1,0 +1,36 @@
+@import '@styles/var.scss';
+
+.nav {
+  display: flex;
+  margin-top: 80px;
+}
+
+.list {
+  margin-inline: auto;
+  display: flex;
+
+  &Item {
+    display: flex;
+    align-items: center;
+    transition: color 0.3s ease;
+    &:hover {
+      color: $blue-500;
+      text-decoration: underline;
+    }
+  }
+}
+
+.active {
+  color: $blue-500;
+  text-decoration: underline;
+}
+
+.button {
+  height: 40px;
+  font-size: 16px;
+  border-radius: 8px;
+}
+
+.link {
+  padding: 5px 10px;
+}

@@ -1,0 +1,72 @@
+@import '@styles/var.scss';
+@import '@styles/mixins.scss';
+
+.post {
+  display: block;
+  height: 100%;
+  border-radius: $br;
+  transition: box-shadow 0.3s ease;
+  padding: 40px;
+  position: relative;
+  overflow: hidden;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+
+  &:hover {
+    box-shadow:
+      0 10px 15px -3px rgb(0 0 0 / 0.1),
+      0 4px 6px -4px rgb(0 0 0 / 0.1);
+  }
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  font-size: 16px;
+  margin-bottom: 30px;
+}
+
+.cat {
+  height: 40px;
+  border-radius: 8px;
+}
+
+.title {
+  @include title;
+  -webkit-line-clamp: 2;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.subtitle {
+  margin-top: 20px;
+  margin-right: 80px;
+  -webkit-line-clamp: 4;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.date {
+  font-size: 16px;
+}
+
+@media (max-width: 800px) {
+  .subtitle {
+    margin-right: 0px;
+  }
+}
+
+@media (max-width: $laptop) {
+  .post {
+    padding: 30px;
+  }
+}
+
+@media (max-width: 800px) {
+  .post {
+    padding: 25px;
+  }
+}

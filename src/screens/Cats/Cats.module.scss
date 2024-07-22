@@ -1,0 +1,32 @@
+@import '@styles/var.scss';
+@import '@styles/mixins.scss';
+
+.wrapper {
+  width: 100%;
+}
+
+.content {
+  @include container(true);
+  display: flex;
+  gap: 40px;
+  margin-block: 20px 100px;
+}
+
+.categoryName {
+  height: 150px;
+  background-color: $gray-200;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.title {
+  @include title;
+  color: $blue-500;
+}
+
+@media (max-width: $laptop) {
+  .content {
+    flex-wrap: wrap;
+  }
+}

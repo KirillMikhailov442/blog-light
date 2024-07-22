@@ -1,0 +1,14 @@
+@import '@styles/mixins.scss';
+
+.notFound {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px;
+}
+
+.text {
+  @include title;
+  margin-block: 40px;
+  text-align: center;
+}

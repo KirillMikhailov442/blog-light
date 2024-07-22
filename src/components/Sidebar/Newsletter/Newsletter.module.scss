@@ -1,0 +1,60 @@
+@import '@styles/var.scss';
+@import '@styles/mixins.scss';
+
+.form {
+  display: flex;
+  flex-direction: column;
+  background-color: $white;
+  border-radius: $br;
+  padding: 40px 30px;
+  margin-top: 40px;
+}
+
+.title {
+  @include title;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.subscribeText {
+  text-align: center;
+}
+
+.group {
+  display: flex;
+  flex-direction: column;
+}
+
+.button {
+  margin-top: 20px;
+}
+
+@media (max-width: $laptop) {
+  .button {
+    height: 50px !important;
+  }
+
+  .form {
+    padding: 20px;
+    border: 0px;
+  }
+
+  .group {
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 20px;
+
+    & > * {
+      flex-grow: 1;
+    }
+
+    & button {
+      margin-top: 0px;
+    }
+  }
+
+  .title {
+    flex-grow: 1;
+  }
+}

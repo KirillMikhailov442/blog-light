@@ -1,0 +1,147 @@
+@import '@styles/var.scss';
+@import '@styles/mixins.scss';
+
+@media (prefers-color-scheme: dark) {
+  $blue-500: #000;
+}
+
+.container {
+  width: 1200px;
+  margin-inline: auto;
+  padding: 140px 40px;
+  display: flex;
+  justify-content: space-between;
+  gap: 80px;
+}
+
+.contactInfo {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 320px;
+}
+
+.contactText {
+  color: $blue-500;
+  padding-block: 5px;
+  margin-block: 5px;
+
+  &:hover {
+    text-decoration: underline;
+  }
+
+  & svg {
+    display: inline-block;
+    margin-right: 12px;
+  }
+}
+
+.title {
+  font-size: 30px;
+  font-weight: 500;
+  margin-bottom: 30px;
+}
+
+.socialMedia {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  margin-top: 40px;
+
+  &Item {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background-color: $blue-500;
+    color: $white;
+    transition: all 0.5s ease;
+
+    &:hover {
+      color: $blue-500;
+      background-color: transparent;
+    }
+  }
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  background-color: $white;
+  border-radius: $br;
+  flex-basis: 560px;
+  padding: 40px 60px;
+  box-shadow: 0px 16px 34px -3px rgba(184, 180, 184, 1);
+}
+
+.input {
+  margin-bottom: 20px;
+
+  & input {
+    background-color: $gray-150;
+
+    &::placeholder {
+      color: $gray-700;
+      font-weight: 400;
+    }
+  }
+}
+
+.button {
+  height: 50px !important;
+}
+
+.textarea {
+  margin-bottom: 20px;
+}
+
+.check {
+  color: $blue-500;
+  font-size: 80px;
+  margin-inline: auto;
+  margin-block: 10px 40px;
+}
+
+@media (max-width: $laptop) {
+  .container {
+    padding: 40px 20px;
+  }
+}
+
+@media (max-width: $tablet) {
+  .container {
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .title {
+    text-align: center;
+  }
+}
+
+@media (max-width: $mobileL) {
+  .contactInfo {
+    padding-inline: 20px;
+  }
+
+  .container {
+    padding: 0px;
+  }
+
+  .form {
+    flex-basis: 100%;
+    padding: 20px;
+    border-radius: 0px;
+    box-shadow: none;
+  }
+
+  .title {
+    font-size: 24px;
+  }
+
+  .check {
+    margin-block: 0px 15px;
+  }
+}

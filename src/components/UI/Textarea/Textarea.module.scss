@@ -1,0 +1,28 @@
+@import '@styles/var.scss';
+
+.textarea {
+  width: 100%;
+  min-height: 80px;
+  max-height: 200px;
+  padding: 12px 30px;
+  color: $black-600;
+  background-color: $gray-100;
+  border-radius: $br;
+  transition: color 0.4s ease;
+
+  &:focus {
+    background-color: $gray-150;
+    outline: 2px solid $blue-500;
+  }
+
+  &::placeholder {
+    color: $gray-700;
+  }
+}
+
+.error {
+  margin-top: 6px;
+  margin-left: 16px;
+  font-size: 0.8em;
+  color: $red;
+}
